@@ -1,0 +1,23 @@
+{
+  "name": "boris-routes",
+  "version": "0.0.1",
+  "description": "## Proposals",
+  "main": "index.js",
+  "dependencies": {
+    "universal-router": "^8.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boris-io/boris-routes.js.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boris-io/boris-routes.js/issues"
+  },
+  "homepage": "https://github.com/boris-io/boris-routes.js#readme"
+}
