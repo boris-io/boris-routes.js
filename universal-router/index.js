@@ -19,8 +19,15 @@ class Boris {
   _render(container) {
     this._router.resolve(document.location.pathname)
     .then(html => {
+      let event = new Event(`Router::premount`);
+      event.data = {
+        path: document.location.pathname
+      }
+      window.dispatchEvent(event);
+
       container.innerHTML = html;
-      let event = new Event(`Router::mount::${document.location.pathname}`);
+
+      event = new Event(`Router::mount::${document.location.pathname}`);
       window.dispatchEvent(event);
     })
   }
