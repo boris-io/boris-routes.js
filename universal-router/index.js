@@ -1,8 +1,14 @@
 import UniversalRouter from 'universal-router';
 
 class Boris {
-  constructor(...args) {
-    this._router = new UniversalRouter(...args);
+  constructor(routes, opts) {
+    const options = {
+      errorHandler(error, context) {
+        if (error.status === 404 && opts.NotFound) return opts.NotFound;
+        return error;
+      }
+    }
+    this._router = new UniversalRouter(routes, options);
     this._inited = false;
   }
 
